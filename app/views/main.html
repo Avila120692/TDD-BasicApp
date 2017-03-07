@@ -1,7 +1,7 @@
 <div class="">
-  <a class="btn btn-sm btn-success" ng-click="hideImage()">Hide me</a>
-  <br>
+  <a class="btn btn-sm btn-success" ng-click="hideImage()">{{buttonText}}</a>
 </div>
+<br>
 
 <div ng-show = "showImage" class="jumbotron">
     <img src="images/tdd_cycle.jpg"><br>
@@ -10,24 +10,28 @@
 
 <div class = "jumbotron">
   <p>
-    
+
   </p>
 </div>
 
+<div class="">
+  <a class="btn btn-sm btn-danger" ng-click="populate()">Populate</a>
+</div>
+<br>
 <div>
   <table class="table">
     <thead>
       <tr>
-        <th>Property</th>
-        <th>Property 2</th>
-        <th>Property 3</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>E-mail</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Value 1</td>
-        <td>Value 2</td>
-        <td>Value 3</td>
+      <tr ng-repeat="item in items">
+        <td>{{item.name}}</td>
+        <td>{{item.username}}</td>
+        <td>{{item.email}}</td>
       </tr>
     </tbody>
   </table>
