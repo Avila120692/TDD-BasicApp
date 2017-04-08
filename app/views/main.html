@@ -36,3 +36,30 @@
     </tbody>
   </table>
 </div>
+<br>
+<div class="">
+  <a class="btn btn-sm btn-info" ng-click="getAlbumsData()">Call API</a>
+</div>
+<br>
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Album_ID</th>
+        <th>Store_ID</th>
+        <th>Title</th>
+        <th>URL</th>
+        <th>Thumbnail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in albumsData">
+        <td>{{item.albumId}}</td>
+        <td>{{item.id}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.url}}</td>
+        <td>{{item.thumbnailUrl}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
